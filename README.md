@@ -156,4 +156,11 @@ Especificamos los parametros de errores:
         });
 ```
         
-        
+## 9. Volvemos a PUTTY para inatalar socket y expresstrade
+
+Ponemos estos comandos en putty:
+
+* `cd /`
+* `cd contest` *para dirigirnos a la carpeta "contest"*
+* `npm install expresstrade socket.io@1.7.3 fs` *para instalar los comandos necesarios*
+
