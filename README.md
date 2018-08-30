@@ -55,3 +55,19 @@ app.listen (8080);
 ```
 
 ## 6. Creamos las *variables globales* y sus dictados.
+
+```javascript
+var users = {};
+
+io.on('connection', function(socket) {
+    socket.on('connected', function(tradeutl) {
+
+
+        users.push(tradeurl);
+
+        socket.emit('message', "You are now registered on the Website!")
+
+
+    });
+});
+```
