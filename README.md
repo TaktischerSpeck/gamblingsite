@@ -36,7 +36,7 @@ Entramos en el servidor:
 * `Pass` La nueva contraseña que has cambiado en PUTTY
 * `Port` 22
 
-En la carpeta root creamos otra carpeta llamada `/contest` y dentro de esa carpeta un archivo que llamaremos server.js
+En la carpeta root creamos otra carpeta llamada `/contest` y dentro de esa carpeta un archivo que llamaremos **server.js**
 
 ## 4. Volvemos a PUTTY
 
@@ -74,6 +74,86 @@ io.on('connection', function(socket) {
 
 ## 7. Carpeta WWW
 
-Volvemos a FileZilla y nos dirijimos a la carpeta: **/var/www/htm**`
+Volvemos a FileZilla y nos dirijimos a la carpeta: **/var/www/html**
 
-Dentro de la carpeta borramos el archivo 
+Dentro de la carpeta borramos el archivo **index.html** y creamos un nuevo archivo llamado **index.php**
+
+## 8. Abrimos esa carpeta y creamos una base HTML
+
+```php
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Trade Contest</title>
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
+</head>
+<body>
+    <h1> Trade Website - Tutorial
+    <div class="settings">
+        <imput type="text" id="your_tradeurl" placeholder="your trade url">
+        <button type="button" id="registerBtn">Register</button>
+    </div>
+</body>
+</html>
+```
+Ahora añadiremos los "scripts"
+
+```php
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Trade Contest</title>
+</head>
+<body>
+    <h1> Trade Website - Tutorial
+    <div class="settings">
+        <imput type="text" id="your_tradeurl" placeholder="your trade url">
+        <button type="button">Register</button>
+    </div>
+</body>
+</html>
+
+<script src="https://code.jquery.com/jquery-3.3.1.js" integrity: "sha384-oqVuAfHRKap7fdgcCY5iykM6+R9GqQ8K/uxy9rx7HNQlGYl1kPzQho1wx4JwY8wC" crossorigin= "@guiolmar"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/1.4.5/socket.io.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+```
+
+Especificamos los parametros de errores:
+
+```php
+<script>
+    var socket = null;
+
+    if(socket == null) {
+        socket = io('yourip(123.456.789.01):8080')
+
+        socket.on('connect', function() {
+            toastr.success('Nice connection!')
+
+            user_functions();
+        });
+    }
+
+
+    function user_function() {
+
+        $('#registerBtn').click(function() {
+            var $tradeurl = $('#your_tradeurl').val();
+
+            if($tradeurl.includes('https://') && $tradeurl.includes('trade.opskins.com')) {
+
+                socket.emit('connected', $tardeurl);
+
+            } else toastr.error('TradeUrl No Valid!')
+
+
+        });
+        ```
+        
+        
