@@ -35,3 +35,23 @@ Entramos en el servidor:
 * `User` root
 * `Pass` La nueva contraseña que has cambiado en PUTTY
 * `Port` 22
+
+En la carpeta root creamos otra carpeta llamada `/contest` y dentro de esa carpeta un archivo que llamaremos server.js
+
+## 4. Volvemos a PUTTY
+
+Ponemos este codigo para instalar nodejs: `curl -sL https://deb.nodesource.com/setup_6.x | sudo -E bash -`
+
+Cuando acabe ingresamos este codigo: `sudo apt-get install -y nodejs`
+
+## 5. Creamos las variablesque inician el servidor (luego añadiremos mas)
+
+```javascript
+var app = require('https').createServer();
+var io = require('socket.io')(app);
+var fs = require('fs');
+
+app.listen (8080);
+```
+
+## 6. Creamos las *variables globales* y sus dictados.
