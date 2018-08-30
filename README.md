@@ -8,6 +8,8 @@ Creamos un servidor Ubuntu 14.04.5 x64.
 
 La contraseña del servidor la enviarán al correo asociado con la cuenta de DigitalOcean.
 
+
+
 ## 2. Abrimos el servidor en PUTTY
 
 Descargamos PUTTY (https://the.earth.li/~sgtatham/putty/latest/w64/putty-64bit-0.70-installer.msi)
