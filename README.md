@@ -71,3 +71,9 @@ io.on('connection', function(socket) {
     });
 });
 ```
+
+## 7. Carpeta WWW
+
+Volvemos a FileZilla y nos dirijimos a la carpeta: **/var/www/htm**`
+
+Dentro de la carpeta borramos el archivo 
