@@ -1,5 +1,10 @@
 # WAX ExpressTrade Tutorial
 
+## README(EN)
+
+Forgive me if any expression is badly expressed, I do not usually speak English ... It has been hard for me to do it, I hope you value it ...
+Thank you
+
 ## 1. Create the server
 
 We create the server in DigitalOcean.com (https://m.do.co/c/563ae669c336)
