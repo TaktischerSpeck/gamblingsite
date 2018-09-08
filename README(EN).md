@@ -26,7 +26,7 @@ Next command:
 
 
 ```shell
-apt-get install apache2 mysql-server phpmyadmin php5
+apt-get install apache2 mysql-server phpmyadmin php5.6
 ```
 You create a password for the DB and continue with the simple inatalación.
 
