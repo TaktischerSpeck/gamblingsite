@@ -83,7 +83,7 @@ We return to FileZilla and go to the folder: **/ var / www / html**
 
 Inside the folder we delete the file **index.html** and create a new file called **index.php**
 
-## 8. We opened that folder and created an HTML base
+## 8. We opened that file and created an HTML base
 
 ```php
 <!DOCTYPE html>
