@@ -36,9 +36,9 @@ Open FileZilla. Download: https://filezilla-project.org/
 
 Join the server:
 
-* `Host` La iP del servidor 
+* `Host` IP-Address or Hostname or Domain of your FPS
 * `User` root
-* `Pass` La nueva contraseña que has cambiado en PUTTY
+* `Pass` Password you choose before for the Root user 
 * `Port` 22
 
 In the root folder we create another folder called `/ contest` and inside that folder a file that we will call **server.js**
